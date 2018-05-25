@@ -1,9 +1,9 @@
 {
   "name": "cross-per-env",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Clean up your package.json with per-NODE_ENV npm scripts",
   "bin": {
-    "per-env": "./bin/per-env"
+    "cross-per-env": "./bin/per-env"
   },
   "scripts": {
     "test": "NODE_ENV=development ./bin/per-env && NODE_ENV=test ./bin/per-env",
