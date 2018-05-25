@@ -1,6 +1,6 @@
 {
-  "name": "per-env",
-  "version": "1.0.2",
+  "name": "cross-per-env",
+  "version": "1.0.3",
   "description": "Clean up your package.json with per-NODE_ENV npm scripts",
   "bin": {
     "per-env": "./bin/per-env"
@@ -9,7 +9,8 @@
     "test": "NODE_ENV=development ./bin/per-env && NODE_ENV=test ./bin/per-env",
     "posttest": "NODE_ENV=test npm run test:status",
     "test:status": "./bin/per-env",
-    "test:status:test": "cat does.not.exist &> /dev/null && exit 1 || echo Status: $?",
+    "test:status:test":
+      "cat does.not.exist &> /dev/null && exit 1 || echo Status: $?",
     "pretest:development": "echo ${npm_lifecycle_event} ${CUSTOM_VALUE}",
     "test:development": "echo ${npm_lifecycle_event} ${CUSTOM_VALUE}",
     "posttest:development": "echo ${npm_lifecycle_event} ${CUSTOM_VALUE}",
@@ -24,18 +25,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericclemmons/per-env.git"
+    "url": "git+https://github.com/asgramme/per-env.git"
   },
-  "keywords": [
-    "npm",
-    "run",
-    "NODE_ENV",
-    "scripts"
-  ],
-  "author": "Eric Clemmons <eric@smarterspam.com>",
+  "keywords": ["npm", "run", "NODE_ENV", "scripts"],
+  "author": "Åsmund Grammeltvedy <asmundg@big-oil.org>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ericclemmons/per-env/issues"
   },
-  "homepage": "https://github.com/ericclemmons/per-env#readme"
+  "homepage": "https://github.com/asgramme/per-env#readme"
 }
